@@ -244,7 +244,12 @@ public class LOGIN extends javax.swing.JFrame {
         String inputPassword = new String(jPasswordFieldPassword.getPassword()).trim();
         
         if(inputUsername.equals(RegistrationAndLogin.username) && inputPassword.equals(RegistrationAndLogin.password)){
-            JOptionPane.showMessageDialog(this,"Login successful!" , "Welcome" , JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this,"Login successful!" , "Welcome To QuickChat" , JOptionPane.INFORMATION_MESSAGE);
+        
+            Options chat = new Options();
+            chat.setVisible(true);
+            this.dispose();
+        
         } else {
             JOptionPane.showMessageDialog(this, "Invalid Username or password." , "Login Failed",JOptionPane.ERROR_MESSAGE);
             
